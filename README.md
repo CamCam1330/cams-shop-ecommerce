@@ -25,45 +25,38 @@ SV22T1020670.sln
     ├── SV22T1020670.DataLayers/     # Data Access Layer giao tiếp CSDL qua Dapper
     └── SV22T1020670.DomainModels/   # Domain Entities (Product, Order, Customer...)
 ```
-##✨ Key Features
-🛍️ Shop Application (Dành cho khách hàng)
+## ✨ Key Features
 
-Duyệt & Tìm kiếm: Lọc sản phẩm theo danh mục và khoảng giá.
+**🛍️ Shop Application (Dành cho khách hàng)**
+* **Duyệt & Tìm kiếm:** Lọc sản phẩm theo danh mục và khoảng giá.
+* **Chi tiết sản phẩm:** Xem thông tin chi tiết và đánh giá (review) sản phẩm.
+* **Giỏ hàng (Shopping Cart):** Thêm/sửa/xóa sản phẩm trong giỏ hàng (quản lý qua Session).
+* **Thanh toán (Checkout):** Xác nhận đơn hàng.
+* **Quản lý cá nhân:** Xem lịch sử mua hàng và trạng thái đơn hàng.
 
-Chi tiết sản phẩm: Xem thông tin chi tiết và đánh giá (review) sản phẩm.
+**⚙️ Admin Application (Dành cho Ban quản trị)**
+* **Phân quyền (Authorization):** Bảo mật các endpoint qua `[Authorize]` và Cookie Authentication.
+* **Quản lý Đơn hàng:** Tìm kiếm, lập đơn, duyệt đơn, chuyển giao hàng, hủy hoặc xóa đơn hàng.
+* **Quản lý Sản phẩm & Quảng cáo:** CRUD thông tin sản phẩm, banner quảng cáo.
+* **Quản lý Đối tác:** Quản lý thông tin nhà cung cấp (Supplier) và đơn vị vận chuyển (Shipper).
 
-Giỏ hàng (Shopping Cart): Thêm/sửa/xóa sản phẩm trong giỏ hàng (quản lý qua Session).
-
-Thanh toán (Checkout): Xác nhận đơn hàng.
-
-Quản lý cá nhân: Xem lịch sử mua hàng và trạng thái đơn hàng.
-
-⚙️ Admin Application (Dành cho Ban quản trị)
-
-Phân quyền (Authorization): Bảo mật các endpoint qua [Authorize] và Cookie Authentication.
-
-Quản lý Đơn hàng (Order Management): Tìm kiếm, lập đơn, duyệt đơn, chuyển giao hàng, hủy hoặc xóa đơn hàng.
-
-Quản lý Sản phẩm & Quảng cáo: CRUD thông tin sản phẩm, banner quảng cáo.
-
-Quản lý Đối tác: Quản lý thông tin nhà cung cấp (Supplier) và đơn vị vận chuyển (Shipper).
-
-##📸 Screenshots
+## 📸 Screenshots
 
 <img width="1915" height="1006" alt="image" src="https://github.com/user-attachments/assets/33c953a2-9ce1-4267-9c15-f1adeb1f2b8a" />
 <img width="1919" height="1002" alt="image" src="https://github.com/user-attachments/assets/b6649b07-5f07-4f1a-88b7-fa67f7270cbc" />
-<img width="1919" height="1008" alt="image" src="https://github.com/user-attachments/assets/09dcde02-3257-4a23-ad6e-86bbd954f83f" />
-<img width="1916" height="1006" alt="image" src="https://github.com/user-attachments/assets/2ce48184-af03-4627-91f4-d45e322ec92f" />
-<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/497ff12a-3492-4196-9e7b-fbd4a452fc21" />
 
-##🛠️ Getting Started
-Prerequisites (Yêu cầu hệ thống)
-.NET 9.0 SDK trở lên.
-SQL Server (LocalDB hoặc bản đầy đủ).
-Visual Studio 2022 (khuyến nghị) hoặc Visual Studio Code.
+## 🛠️ Getting Started
 
-Installation & Setup
-1. Clone repository:
+### Prerequisites (Yêu cầu hệ thống)
+* .NET 9.0 SDK trở lên.
+* SQL Server (LocalDB hoặc bản đầy đủ).
+* Visual Studio 2022 (khuyến nghị) hoặc Visual Studio Code.
+
+### Installation & Setup
+
+1. **Clone repository:**
+   ```bash
+   git clone [https://github.com/CamCam1330/cams-shop-ecommerce.git](https://github.com/CamCam1330/cams-shop-ecommerce.git)
 
 2. Thiết lập Cơ sở dữ liệu:
   Tìm file script SQL trong thư mục dự án.
@@ -76,6 +69,6 @@ Installation & Setup
 
   Cập nhật ConnectionString trỏ tới CSDL SQL Server của bạn. Chuỗi kết nối này sẽ được BusinessLayers khởi tạo và tiêm vào các DAL.
 
-##👨‍💻 Author
+## 👨‍💻 Author
 Họ và tên: Thân Hoàng Phước Minh
 Mã sinh viên: 22T1020670
