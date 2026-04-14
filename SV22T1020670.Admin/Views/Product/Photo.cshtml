@@ -1,0 +1,73 @@
+﻿@model SV22T1020670.DomainModels.ProductPhoto
+@{
+    // Tiêu đề đã được set trong Controller (ViewBag.Title)
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <form class="form-horizontal" method="post" enctype="multipart/form-data" action="~/Product/SavePhoto">
+
+            <!-- Input hidden để lưu các giá trị cần thiết -->
+            <input type="hidden" name="PhotoID" value="@Model.PhotoID" />
+            <input type="hidden" name="ProductID" value="@Model.ProductID" />
+            <input type="hidden" name="Photo" value="@Model.Photo" />
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Chọn file ảnh:</label>
+                <div class="col-sm-10">
+                    <!-- Input file với name="uploadPhoto" trùng khớp với tham số trong Controller -->
+                    <input type="file" class="form-control" name="uploadPhoto" accept="image/*"
+                           onchange="document.getElementById('PhotoPreview').src = window.URL.createObjectURL(this.files[0])" />
+                    @Html.ValidationMessageFor(m => m.Photo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-sm-10">
+                    <!-- Hiển thị ảnh cũ hoặc ảnh mặc định -->
+                    <img id="PhotoPreview" src="~/images/products/@Model.Photo"
+                         onerror="this.src='/images/products/nophoto.png'"
+                         class="img img-bordered" style="width:200px" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Mô tả/Tiêu đề:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Description" value="@Model.Description" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Thứ tự hiển thị:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="DisplayOrder" value="@Model.DisplayOrder" />
+                    @Html.ValidationMessageFor(m => m.DisplayOrder, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <!-- Checkbox cho IsHidden -->
+                            <input type="checkbox" name="IsHidden" value="true" @(Model.IsHidden ? "checked" : "") /> Không hiển thị ảnh
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Lưu dữ liệu
+                    </button>
+                    <a href="~/Product/Edit/@Model.ProductID" class="btn btn-warning">
+                        Quay lại
+                    </a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@using SV22T1020670.DomainModels
+@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Lịch sử mua hàng";
+}
+
+<div class="container py-5">
+    <h3 class="fw-bold mb-4 text-uppercase">Lịch sử mua hàng</h3>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead class="bg-light text-uppercase small fw-bold">
+                            <tr>
+                                <th class="ps-4 py-3">Mã đơn</th>
+                                <th class="py-3">Ngày đặt</th>
+                                <th class="py-3">Nơi nhận</th>
+                                <th class="py-3">Trạng thái</th>
+                                <th class="text-end pe-4 py-3">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="ps-4 fw-bold text-primary">#@item.OrderID</td>
+                                    <td>@item.OrderTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>
+                                        <div class="text-truncate" style="max-width: 200px;" title="@item.DeliveryAddress">
+                                            @item.DeliveryProvince
+                                        </div>
+                                    </td>
+                                    <td>
+                                        @if (item.Status == Constants.ORDER_INIT)
+                                        {
+                                            <span class="badge bg-secondary">Chờ xác nhận</span>
+                                        }
+                                        else if (item.Status == Constants.ORDER_ACCEPTED)
+                                        {
+                                            <span class="badge bg-info text-dark">Đã duyệt</span>
+                                        }
+                                        else if (item.Status == Constants.ORDER_SHIPPING)
+                                        {
+                                            <span class="badge bg-primary">Đang giao</span>
+                                        }
+                                        else if (item.Status == Constants.ORDER_FINISHED)
+                                        {
+                                            <span class="badge bg-success">Hoàn thành</span>
+                                        }
+                                        else if (item.Status == Constants.ORDER_CANCEL)
+                                        {
+                                            <span class="badge bg-danger">Đã hủy</span>
+                                        }
+                                        else if (item.Status == Constants.ORDER_REJECTED)
+                                        {
+                                            <span class="badge bg-dark">Bị từ chối</span>
+                                        }
+                                    </td>
+                                    <td class="text-end pe-4">
+                                        <a href="~/Order/Tracking/@item.OrderID" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                                            <i class="fas fa-eye me-1"></i> Theo dõi
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center p-5">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" width="100" class="mb-3 opacity-50">
+                    <p class="text-muted">Bạn chưa có đơn hàng nào.</p>
+                    <a href="~/Product" class="btn btn-primary rounded-pill">Mua sắm ngay</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

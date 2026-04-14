@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-light py-3 mb-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="/" class="text-decoration-none text-muted">Trang chủ</a></li>
+                <li class="breadcrumb-item active fw-bold" aria-current="page">Liên hệ</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-5">
+        <div class="col-lg-6">
+            <h2 class="fw-bold mb-4" style="color: #ed7117;">Liên hệ với chúng tôi</h2>
+            <p class="text-muted mb-4">
+                Chúng tôi luôn lắng nghe ý kiến của bạn. Hãy liên hệ với Cam's Shop qua các kênh dưới đây hoặc điền vào biểu mẫu.
+            </p>
+
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0 btn-square rounded-circle bg-light text-primary d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                    <i class="fas fa-map-marker-alt fa-lg" style="color: #ed7117;"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="fw-bold m-0">Địa chỉ</h5>
+                    <p class="text-muted m-0">77 Nguyễn Huệ, TP. Huế, Thừa Thiên Huế</p>
+                </div>
+            </div>
+
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0 btn-square rounded-circle bg-light text-primary d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                    <i class="fas fa-phone-alt fa-lg" style="color: #ed7117;"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="fw-bold m-0">Hotline</h5>
+                    <p class="text-muted m-0">1900 100x - 0987.654.321</p>
+                </div>
+            </div>
+
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0 btn-square rounded-circle bg-light text-primary d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                    <i class="fas fa-envelope fa-lg" style="color: #ed7117;"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="fw-bold m-0">Email</h5>
+                    <p class="text-muted m-0">cskh@camshop.com</p>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="flex-shrink-0 btn-square rounded-circle bg-light text-primary d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                    <i class="fas fa-clock fa-lg" style="color: #ed7117;"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="fw-bold m-0">Giờ làm việc</h5>
+                    <p class="text-muted m-0">Thứ 2 - Chủ Nhật: 8:00 - 22:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="bg-light p-4 rounded shadow-sm h-100">
+                <h4 class="fw-bold mb-4">Gửi tin nhắn cho chúng tôi</h4>
+
+                <form id="contactForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" name="FullName" class="form-control" placeholder="Họ và tên *" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" name="Email" class="form-control" placeholder="Email của bạn *" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="Title" class="form-control" placeholder="Tiêu đề">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="Message" class="form-control" rows="5" placeholder="Nội dung tin nhắn *" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3 fw-bold text-uppercase" type="submit"
+                                    style="background-color: #ed7117; border-color: #ed7117;">
+                                <i class="fas fa-paper-plane me-2"></i> Gửi tin nhắn
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="rounded overflow-hidden shadow-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.337194833256!2d107.59296531529307!3d16.45851493326177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a14a7990e663%3A0x6e2c34279774673!2zNzcgTmd1eeG7hW4gSHXhu4csIFBow7ogTmh14bqtbiwgVGjDoW5oIHBo4buSIEh14bq_,_VGjhu6thIFRoacOqbiBIdeG6vw!5e0!3m2!1svi!2s!4v1678111111111!5m2!1svi!2s"
+                        height="450"
+                        style="border:0; width: 100%;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>

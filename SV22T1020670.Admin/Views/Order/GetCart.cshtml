@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SV22T1020670.DomainModels.OrderDetail>
+@{
+    Layout = null;
+    int i = 0;
+    decimal sum = 0;
+}
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr class="bg-primary text-white">
+                <th class="text-center">STT</th>
+                <th class="text-center">Tên hàng</th>
+                <th class="text-center">ĐVT</th>
+
+                <th class="text-center" style="width: 150px">Số lượng</th>
+
+                <th class="text-center" style="width: 120px">Giá</th>
+                <th class="text-center" style="width: 150px">Thành tiền</th>
+                <th style="width: 40px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                sum += item.TotalPrice;
+                <tr>
+                    <td class="text-center">@(++i)</td>
+                    <td>@item.ProductName</td>
+                    <td class="text-center">@item.Unit</td>
+                    <td class="text-center" style="vertical-align: middle; white-space: nowrap;">
+                        <a href="javascript:void(0);" class="btn btn-xs btn-warning" onclick="updateCartQuantity(@item.ProductID, -1)">
+                            <i class="fa fa-minus"></i>
+                        </a>
+
+                        <span style="margin: 0 10px; font-weight: bold;">@item.Quantity</span>
+
+                        <a href="javascript:void(0);" class="btn btn-xs btn-info" onclick="updateCartQuantity(@item.ProductID, 1)">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </td>
+                    <td class="text-right" style="vertical-align: middle;">
+                        @string.Format("{0:N0}", item.SalePrice)
+                    </td>
+                    <td class="text-right" style="vertical-align: middle; white-space: nowrap; font-weight: bold;">
+                        @string.Format("{0:N0}", item.TotalPrice)
+                    </td>
+                    <td class="text-right" style="vertical-align: middle;">
+                        <button type="button" class="btn btn-xs btn-danger" onclick="removeFromCart(@item.ProductID)">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        @* <a href="javascript:;" class="btn btn-xs btn-danger" onclick="removeFromCart(@item.ProductID)">
+                            <i class="fa fa-minus"></i>
+                        </a> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="5" class="text-right">Tổng cộng:</th>
+                <th class="text-right">@string.Format("{0:N0}", sum)</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+}
+else
+{
+    <p class="text-muted">Giỏ hàng trống</p>
+}

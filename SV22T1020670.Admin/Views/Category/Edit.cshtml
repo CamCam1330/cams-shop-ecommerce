@@ -1,0 +1,48 @@
+﻿@model SV22T1020670.DomainModels.Category
+@{
+    ViewBag.Title = Model.CategoryID == 0 ? "Bổ sung loại hàng" : "Cập nhật loại hàng";
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <form action="~/Category/SaveData" method="post" enctype="multipart/form-data">
+
+            <input type="hidden" name="@nameof(Model.CategoryID)" value="@Model.CategoryID" />
+
+            <input type="hidden" name="@nameof(Model.Photo)" value="@Model.Photo" />
+
+            <div class="form-group">
+                <label>Tên loại hàng:</label>
+                <input type="text" class="form-control" autofocus name="@nameof(Model.CategoryName)" value="@Model.CategoryName">
+                @Html.ValidationMessage(nameof(Model.CategoryName), new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label>Mô tả:</label>
+                <input type="text" class="form-control" name="@nameof(Model.Description)" value="@Model.Description">
+            </div>
+
+            <div class="form-group">
+                <label>Ảnh minh họa:</label>
+                <input type="file" name="uploadPhoto" class="form-control" accept="image/*"
+                       onchange="document.getElementById('PhotoPreview').src = window.URL.createObjectURL(this.files[0])" />
+            </div>
+
+            <div class="form-group">
+                <img id="PhotoPreview" src="~/images/categories/@Model.Photo"
+                     onerror="this.src='/images/no-image.png'"
+                     class="img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;" />
+            </div>
+
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-floppy-o"></i> Lưu dữ liệu
+                </button>
+                <a href="~/Category" class="btn btn-default">
+                    Quay lại
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>

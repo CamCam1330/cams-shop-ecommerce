@@ -1,0 +1,149 @@
+﻿@using SV22T1020670.DomainModels
+@using SV22T1020670.Shop.AppCodes
+@model Order
+@{
+    ViewData["Title"] = $"Đơn hàng #{Model.OrderID}";
+    var details = ViewBag.OrderDetails as IEnumerable<OrderDetail>;
+    decimal totalAmount = details != null ? details.Sum(d => d.TotalPrice) : 0;
+}
+
+<div class="bg-light py-3 mb-4">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 font-size-sm">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Đơn hàng #@Model.OrderID</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="fw-bold mb-0">Trạng thái đơn hàng</h5>
+                <span class="text-muted small">Ngày đặt: @Model.OrderTime.ToString("dd/MM/yyyy HH:mm")</span>
+            </div>
+
+            <div class="d-flex justify-content-between position-relative align-items-center mt-5 mb-3 px-4">
+                <div class="position-absolute start-0 end-0 top-50 translate-middle-y bg-light" style="height: 4px; z-index: 0; margin: 0 50px;"></div>
+
+                @{
+                    // Logic xác định trạng thái active
+                    int status = Model.Status;
+                    bool s1 = status >= Constants.ORDER_INIT;
+                    bool s2 = status >= Constants.ORDER_SHIPPING; // Bỏ qua bước duyệt, nhảy sang giao hàng
+                    bool s3 = status == Constants.ORDER_FINISHED;
+
+                    string activeColor = "btn-success";
+                    string inactiveColor = "btn-secondary";
+
+                    // Nếu hủy
+                    if (status < 0) { activeColor = "btn-danger"; }
+                }
+
+                <div class="text-center position-relative" style="z-index: 1;">
+                    <button class="btn @(s1? activeColor : inactiveColor) rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 50px; height: 50px;">
+                        <i class="fas fa-file-invoice fs-5"></i>
+                    </button>
+                    <div class="fw-bold mt-2 small">Chờ xác nhận</div>
+                </div>
+
+                <div class="text-center position-relative" style="z-index: 1;">
+                    <button class="btn @(s2? activeColor : inactiveColor) rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 50px; height: 50px;">
+                        <i class="fas fa-truck fs-5"></i>
+                    </button>
+                    <div class="fw-bold mt-2 small">Đang giao</div>
+                </div>
+
+                <div class="text-center position-relative" style="z-index: 1;">
+                    <button class="btn @(s3? activeColor : inactiveColor) rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 50px; height: 50px;">
+                        <i class="fas fa-box-open fs-5"></i>
+                    </button>
+                    <div class="fw-bold mt-2 small">Hoàn thành</div>
+                </div>
+            </div>
+
+            @if (status < 0)
+            {
+                <div class="alert alert-danger text-center mt-4 mb-0">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Đơn hàng đã bị @(status == Constants.ORDER_CANCEL ? "HỦY" : "TỪ CHỐI")
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-white py-3">
+                    <h6 class="mb-0 fw-bold text-uppercase"><i class="fas fa-map-marker-alt text-primary me-2"></i> Địa chỉ nhận hàng</h6>
+                </div>
+                <div class="card-body">
+                    <p class="mb-1 fw-bold">Thông tin giao hàng</p>
+
+                    <p class="mb-2 text-muted">
+                        @Model.DeliveryAddress
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white py-3">
+                    <h6 class="mb-0 fw-bold text-uppercase"><i class="fas fa-shopping-bag text-primary me-2"></i> Sản phẩm</h6>
+                </div>
+                <div class="card-body p-0">
+                    @if (details != null && details.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="ps-4">Sản phẩm</th>
+                                        <th class="text-center">SL</th>
+                                        <th class="text-end pe-4">Tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in details)
+                                    {
+                                        <tr>
+                                            <td class="ps-4">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="@WebConfig.GetImageUrl("products", item.Photo)"
+                                                         class="rounded border me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                                    <div>
+                                                        <span class="fw-bold text-dark">@item.ProductName</span>
+                                                        <div class="text-muted small">@item.SalePrice.ToString("N0")đ</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">x @item.Quantity</td>
+                                            <td class="text-end pe-4 fw-bold text-primary">@item.TotalPrice.ToString("N0")đ</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot class="bg-light">
+                                    <tr>
+                                        <td colspan="2" class="text-end fw-bold py-3">Tổng tiền:</td>
+                                        <td class="text-end pe-4 fw-bold text-danger fs-5 py-3">@totalAmount.ToString("N0")đ</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="p-4 text-center text-muted">
+                            Không tìm thấy chi tiết sản phẩm.
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

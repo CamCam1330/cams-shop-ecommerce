@@ -1,0 +1,53 @@
+﻿@model PaginationSearchInput
+@{
+    ViewBag.Title = "Quản lý Quảng cáo";
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <form id="formSearch" action="~/Advertisement/Search" method="get" data-container="#searchResult">
+            <div class="input-group">
+                <input name="@nameof(Model.SearchValue)" type="text" class="form-control" placeholder="Nhập tiêu đề quảng cáo cần tìm..." value="@Model.SearchValue">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-flat">
+                        <i class="fa fa-search"></i> Tìm kiếm
+                    </button>
+                    <a href="~/Advertisement/Create" class="btn btn-primary btn-flat">
+                        <i class="fa fa-plus"></i> Bổ sung
+                    </a>
+                </span>
+            </div>
+        </form>
+
+        <div id="searchResult" class="table-responsive"></div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        function doSearch(page) {
+            var searchCondition = $("#formSearch").serializeArray();
+            searchCondition.push({ name: "Page", value: page });
+            var action = $("#formSearch").prop("action");
+            var method = $("#formSearch").prop("method");
+            var container = $("#formSearch").data("container");
+
+            $.ajax({
+                url: action,
+                type: method,
+                data: searchCondition,
+                success: function (data) {
+                    $(container).html(data);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            doSearch(@Model.Page);
+            $("#formSearch").submit(function (e) {
+                e.preventDefault();
+                doSearch(1);
+            });
+        });
+    </script>
+}

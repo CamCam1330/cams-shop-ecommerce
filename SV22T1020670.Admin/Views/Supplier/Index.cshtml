@@ -1,0 +1,119 @@
+﻿@model PaginationSearchInput
+
+@{
+    ViewBag.Title = "Quản lý Nhà cung cấp";
+}
+
+<!-- Thông báo (nếu có, từ trang Delete/Create/Edit trả về) -->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        @TempData["Message"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+
+        <!-- Form tìm kiếm -->
+        <!-- Action trỏ đến hàm /Supplier/Search -->
+        <!-- data-result="#searchResult" báo cho JS biết nơi đổ kết quả vào -->
+        <form id="formSearch" action="~/Supplier/Search" method="get" data-result="#searchResult">
+            <div class="input-group">
+
+                <!-- Luôn phải có PageSize để truyền đi -->
+                <input type="hidden" name="PageSize" value="@Model.PageSize" />
+
+                <!-- Ô tìm kiếm, value được gán từ Model (đã lưu trong Session) -->
+                <input name="SearchValue"
+                       type="text"
+                       class="form-control"
+                       placeholder="Nhập tên nhà cung cấp cần tìm"
+                       value="@Model.SearchValue"
+                       autofocus />
+
+                <div class="input-group-btn">
+                    <button class="btn btn-info" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+                    <a href="~/Supplier/Create"
+                       class="btn btn-primary"
+                       style="margin-left:5px">
+                        <i class="fa fa-plus"></i> Bổ sung
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Nơi hiển thị kết quả Search (do AJAX đổ vào) -->
+        <!-- Ban đầu div này rỗng -->
+        <div id="searchResult"></div>
+
+    </div>
+
+
+</div>
+
+<!-- JavaScript y hệt như của Customer -->
+@section scripts {
+    <script>
+        $(document).ready(function () {
+
+                // Gắn sự kiện submit cho form
+                $("#formSearch").submit(function (e) {
+                    e.preventDefault(); // Ngăn form submit (tải lại trang)
+                    searchData(1); // Luôn tìm từ trang 1 khi nhấn nút Search
+                    return false;
+                });
+
+                // Load trang đầu tiên (hoặc trang đã lưu trong Session)
+                var startPage = @Model.Page;
+                if (startPage <= 0) startPage = 1;
+                searchData(startPage);
+            });
+
+            // Hàm tìm kiếm AJAX
+            function searchData(page) {
+
+                var url = $("#formSearch").prop("action");
+                var method = $("#formSearch").prop("method");
+                var container = $("#formSearch").data("result");
+
+                // Lấy dữ liệu từ form (PageSize, SearchValue)
+                var submitData = $("#formSearch").serializeArray();
+
+                // Thêm số trang (page) vào dữ liệu gửi đi
+                submitData.push({ name: "page", value: page });
+
+                $.ajax({
+                    url: url,
+                    method: method,
+                    data: submitData,
+                    success: function (html) {
+                        // Đổ kết quả (PartialView) vào div#searchResult
+                        $(container).html(html);
+
+                        // Tự động cuộn lên đầu kết quả khi chuyển trang
+                        $('html, body').animate({
+                            scrollTop: $(container).offset().top
+                        }, 300); // 300ms
+                    }
+                });
+            }
+    </script>
+
+
+}

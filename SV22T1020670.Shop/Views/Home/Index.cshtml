@@ -1,0 +1,120 @@
+﻿@using SV22T1020670.Shop.AppCodes
+@using SV22T1020670.Shop
+@model SV22T1020670.Shop.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+@if (Model.Banners != null && Model.Banners.Any())
+{
+    <div id="homeCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Banners.Count; i++)
+            {
+                var item = Model.Banners[i];
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <a href="@item.Link">
+                        <img src="@WebConfig.GetImageUrl("banners", item.Photo)"
+                             class="d-block w-100"
+                             alt="@item.Title"
+                             style="height: 450px; object-fit: cover; object-position: center;">
+                    </a>
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+}
+
+<div class="container">
+
+    @if (Model.Categories != null && Model.Categories.Any())
+    {
+        <div class="text-center mb-5">
+            <h3 class="fw-bold mb-4">Danh Mục Nổi Bật</h3>
+            <div class="d-flex justify-content-center flex-wrap gap-4">
+                @foreach (var cat in Model.Categories)
+                {
+                    <a href="~/Product?categoryID=@cat.CategoryID" class="text-decoration-none text-dark group-hover">
+                        <div class="text-center">
+                            <div class="rounded-circle overflow-hidden mb-2 shadow-sm border mx-auto position-relative"
+                                 style="width: 100px; height: 100px; background-color: #fff;">
+                                <img src="@WebConfig.GetImageUrl("categories", cat.Photo)"
+                                     class="w-100 h-100"
+                                     style="object-fit: contain; padding: 10px;"
+                                     onerror="this.src='/images/no-image.png'">
+                            </div>
+                            <span class="fw-bold small">@cat.CategoryName</span>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    }
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold m-0">Sản phẩm Mới</h3>
+        <a href="~/Product" class="text-primary fw-bold">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    @if (Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
+    {
+        <div class="row row-cols-2 row-cols-md-4 g-4 mb-5">
+            @foreach (var item in Model.FeaturedProducts)
+            {
+                <div class="col">
+                    <div class="product-card h-100">
+                        @if (item.SalePrice > 0 && item.SalePrice < item.Price)
+                        {
+                            var percent = (int)((1 - (item.SalePrice / item.Price)) * 100);
+                            <span class="badge-sale">-@percent%</span>
+                        }
+
+                        <div class="product-img-wrap">
+                            <a href="~/Product/Details/@item.ProductID">
+                                <img src="@WebConfig.GetImageUrl("products", item.Photo)" alt="@item.ProductName">
+                            </a>
+                        </div>
+
+                        <div class="product-info">
+                            <a href="~/Product/Details/@item.ProductID" class="product-title text-dark text-decoration-none" title="@item.ProductName">
+                                @item.ProductName
+                            </a>
+
+                            <div class="mb-2">
+                                @if (item.SalePrice > 0 && item.SalePrice < item.Price)
+                                {
+                                    <span class="price-current">@item.SalePrice.ToString("N0")đ</span>
+                                    <span class="price-old">@item.Price.ToString("N0")đ</span>
+                                }
+                                else
+                                {
+                                    <span class="price-current">@item.Price.ToString("N0")đ</span>
+                                }
+                            </div>
+
+                            <div class="text-warning small mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+
+                            <button class="btn btn-outline-primary btn-sm w-100 rounded-pill" data-action="add-to-cart" data-product-id="@item.ProductID">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            Chưa có sản phẩm nào được bày bán. Vui lòng quay lại sau!
+        </div>
+    }
+</div>

@@ -1,0 +1,275 @@
+﻿@using SV22T1020670.Admin.AppCodes
+@model ProductSearchInput
+@{
+    ViewBag.Title = "Lập đơn hàng";
+    var customers = await SV22T1020670.BusinessLayers.CommonDataService.CustomerDB.ListAsync(1, 0, "");
+}
+
+<!-- Thông báo -->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @TempData["Message"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <div class="row">
+            <!-- Tìm kiếm, hiển thị và chọn hàng đưa vào giỏ -->
+            <div class="col-md-4">
+                <!-- Form tìm kiếm mặt hàng -->
+                <h4>Lựa chọn hàng cần bán</h4>
+                <form id="formSearchProducts"
+                      action="~/Order/SearchProducts"
+                      method="post"
+                      data-result="#searchProductsResult">
+                    <input type="hidden" name="PageSize" value="@(Model?.PageSize ?? 5)" />
+                    <input type="hidden" name="CategoryID" value="@(Model?.CategoryID ?? 0)" />
+                    <input type="hidden" name="SupplierID" value="@(Model?.SupplierID ?? 0)" />
+                    <input type="hidden" name="MinPrice" value="@(Model?.MinPrice ?? 0)" />
+                    <input type="hidden" name="MaxPrice" value="@(Model?.MaxPrice ?? 0)" />
+                    <div class="input-group">
+                        <input type="text"
+                               name="SearchValue"
+                               class="form-control"
+                               placeholder="Nhập tên mặt hàng cần tìm"
+                               value="@(Model?.SearchValue ?? "")"
+                               autofocus>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+
+                <div id="searchProductsResult" style="margin-top:10px">
+                </div>
+            </div>
+
+            <!-- Thông tin giỏ hàng, khách hàng -->
+            <div class="col-md-8">
+                <!-- Giỏ hàng -->
+                <h4>Danh sách mặt hàng đã chọn</h4>
+
+                <div id="cart"></div>
+
+                <div class="text-right" style="margin-top:10px">
+                    <button type="button" class="btn btn-sm btn-danger" onclick="clearCart()">
+                        <i class="fa fa-trash"></i> Xóa giỏ hàng
+                    </button>
+                </div>
+
+                <!-- Nhập khách hàng, nhân viên phụ trách và khởi tạo đơn hàng -->
+                <form id="formOrderInit" action="~/Order/Init" method="post" class="form-horizontal">
+                    <h4>Thông tin về khách hàng và địa chỉ giao hàng</h4>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Khách hàng:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control"
+                                    name="customerID"
+                                    asp-items="await SelectListHelper.Customers()"
+                                    onchange="getCustomerInfo(this)">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tỉnh/thành:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="province"
+                                    name="deliveryProvince"
+                                    asp-items="await SelectListHelper.Provinces()">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Địa chỉ nhận hàng:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="deliveryAddress" id="address" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10 text-right">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-plus-circle"></i> Lập đơn hàng
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function(){
+            $("#formSearchProducts").submit(function(e){
+                e.preventDefault();
+                searchProducts(1);
+            });
+            searchProducts(1);
+            getCart();
+
+            $("#formOrderInit").submit(function(e) {
+                e.preventDefault();
+
+                var url = $(this).prop("action");
+                var method = $(this).prop("method");
+                var submitData = $(this).serializeArray();
+
+                // Lấy nút submit để thao tác
+                var btnSubmit = $(this).find("button[type='submit']");
+                var icon = btnSubmit.find("i");
+                var originalIconClass = icon.attr("class");
+
+                $.ajax({
+                    url: url,
+                    method: method,
+                    data: submitData,
+                    // 1. TRƯỚC KHI GỬI: Khóa nút + Hiện icon loading
+                    beforeSend: function() {
+                        btnSubmit.prop("disabled", true); // Khóa nút
+                        icon.removeClass(originalIconClass).addClass("fa fa-spinner fa-spin"); // Đổi icon xoay
+                    },
+                    success: function(data) {
+                        if (data.code == 1) {
+                            var orderId = data.data;
+                            location.href = `/Order/Details/${orderId}`;
+                        } else {
+                            alert(data.message);
+                            // Nếu lỗi thì mở khóa lại nút để bấm lại
+                            btnSubmit.prop("disabled", false);
+                            icon.attr("class", originalIconClass);
+                        }
+                    },
+                    // 2. KHI HOÀN TẤT (Dù thành công hay thất bại)
+                    error: function() {
+                        // Mở khóa lại nếu lỗi mạng
+                        btnSubmit.prop("disabled", false);
+                        icon.attr("class", originalIconClass);
+                        alert("Lỗi kết nối Server!");
+                    }
+                });
+            });
+        });
+
+        // Thực hiện lời gọi ajax để tìm kiếm mặt hàng và hiển thị kết quả
+        function searchProducts(page) {
+            var url = $("#formSearchProducts").prop("action");
+            var method = $("#formSearchProducts").prop("method");
+            var container = $("#formSearchProducts").data("result");
+            var submitData = $("#formSearchProducts").serializeArray();
+            submitData.push({ name: "page", value: page });
+
+
+            $.ajax({
+                url: url,
+                method: method,
+                data: submitData,
+                success: function (html) {
+                    $(container).html(html);
+                    $('.inputmask-numeric').inputmask({
+                        alias: "numeric",
+                        groupSeparator: ".",       // Dấu chấm phân cách phần nghìn
+                        radixPoint: ",",           // Dấu phẩy phân cách phần thập phân
+                        autoGroup: true,
+                        digits: 0,                 // Không hiển thị phần lẻ
+                        rightAlign: false,         // Không canh phải
+                        removeMaskOnSubmit: true
+                    });
+                }
+            });
+        }
+
+        // Lấy giỏ hàng và hiển thị
+        function getCart(){
+            $.ajax({
+                url: "@Url.Action("GetCart", "Order")",
+                method: "get",
+                success: function (html) {
+                    $("#cart").html(html);
+                }
+            });
+        }
+
+        //Xóa một mặt hàng có mã id trong giỏ hàng
+        function removeFromCart(id){
+            $.ajax({
+                url: "/Order/RemoveFromCart/" + id,
+                method: "post",
+                success: function (data) {
+                    if(data.code == 1){
+                    getCart();
+                    }
+                    else {
+                        alert(data.message);
+                    }
+                }
+            });
+        }
+
+        //Xóa toàn bộ giỏ hàng
+        function clearCart() {
+            $.ajax({
+                url: "/Order/ClearCart",
+                method: "post",
+                success: function (data) {
+                    if(data.code == 1){
+                    getCart();
+                    }
+                    else {
+                        alert(data.message);
+                    }
+                }
+            });
+        }
+
+        //Cập nhật lại số lượng (tăng/giảm) hàng trong giỏ
+        function updateCartQuantity(id, quantity){
+            $.ajax({
+                url: `/Order/UpdateCartQuantity/${id}?quantity= ${quantity}`,
+                method: "post",
+                success: function (data) {
+                    if(data.code == 1) {
+                        getCart();
+                    }
+                    else {
+                        alert(data.message);
+                    }
+                }
+            });
+        }
+
+        //Lấy thông tin khách hàng
+        function getCustomerInfo(obj){
+            var customerId = $(obj).val();
+             $.ajax({
+                url: `/api/customer/${customerId}`,
+                method: "get",
+                success: function (data) {
+                    $("#province").val(data.province);
+                    $("#address").val(data.address);
+                }
+            });
+        }
+    </script>
+}

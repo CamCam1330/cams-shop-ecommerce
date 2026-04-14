@@ -1,0 +1,103 @@
+﻿@model PaginationSearchInput
+@{
+    ViewBag.Title = "Quản lý Người giao hàng";
+}
+
+<!-- Thông báo (nếu có) -->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        @TempData["Message"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+
+        <!-- Form tìm kiếm -->
+        <form id="formSearch" action="~/Shipper/Search" method="get" data-result="#searchResult">
+            <div class="input-group">
+                <input type="hidden" name="PageSize" value="@Model.PageSize" />
+                <input name="SearchValue"
+                       type="text"
+                       class="form-control"
+                       placeholder="Nhập tên người giao hàng cần tìm"
+                       value="@Model.SearchValue"
+                       autofocus />
+
+                <div class="input-group-btn">
+                    <button class="btn btn-info" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+                    <a href="~/Shipper/Create"
+                       class="btn btn-primary"
+                       style="margin-left:5px">
+                        <i class="fa fa-plus"></i> Bổ sung
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Nơi hiển thị kết quả Search (AJAX) -->
+        <div id="searchResult"></div>
+
+    </div>
+
+
+</div>
+
+<!-- JavaScript (y hệt Customer/Supplier) -->
+@section scripts {
+    <script>
+        $(document).ready(function () {
+
+                $("#formSearch").submit(function (e) {
+                    e.preventDefault();
+                    searchData(1);
+                    return false;
+                });
+
+                var startPage = @Model.Page;
+                if (startPage <= 0) startPage = 1;
+                searchData(startPage);
+            });
+
+            function searchData(page) {
+
+                var url = $("#formSearch").prop("action");
+                var method = $("#formSearch").prop("method");
+                var container = $("#formSearch").data("result");
+                var submitData = $("#formSearch").serializeArray();
+
+                submitData.push({ name: "page", value: page });
+
+                $.ajax({
+                    url: url,
+                    method: method,
+                    data: submitData,
+                    success: function (html) {
+                        $(container).html(html);
+
+                        $('html, body').animate({
+                            scrollTop: $(container).offset().top
+                        }, 300);
+                    }
+                });
+            }
+    </script>
+
+
+}

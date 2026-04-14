@@ -1,0 +1,130 @@
+﻿@model ProductSearchInput
+@{
+    ViewBag.Title = "Quản lý Mặt hàng";
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <!-- Form đầu vào tìm kiếm -->
+        <!-- Lưu ý: action trỏ về Search để AJAX lấy URL đúng -->
+        <form id="formSearch" action="~/Product/Search" method="get" data-result="#searchResult">
+
+            <!-- Input hidden để lưu PageSize -->
+            <input type="hidden" name="PageSize" value="@Model.PageSize" />
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Loại hàng:</label>
+                    <select class="form-control" name="CategoryID">
+                        <option value="0">-- Chọn loại hàng --</option>
+                        <!-- Sử dụng .Result để lấy dữ liệu đồng bộ trong View -->
+                        @foreach (var item in SV22T1020670.BusinessLayers.CommonDataService.CategoryDB.ListAsync(1, 0, "").Result)
+                        {
+                            if (item.CategoryID == Model.CategoryID)
+                            {
+                                <option value="@item.CategoryID" selected>@item.CategoryName</option>
+                            }
+                            else
+                            {
+                                <option value="@item.CategoryID">@item.CategoryName</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label>Nhà cung cấp:</label>
+                    <select class="form-control" name="SupplierID">
+                        <option value="0">-- Chọn nhà cung cấp --</option>
+                        @foreach (var item in SV22T1020670.BusinessLayers.CommonDataService.SupplierDB.ListAsync(1, 0, "").Result)
+                        {
+                            if (item.SupplierID == Model.SupplierID)
+                            {
+                                <option value="@item.SupplierID" selected>@item.SupplierName</option>
+                            }
+                            else
+                            {
+                                <option value="@item.SupplierID">@item.SupplierName</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-sm-1">
+                    <label>Giá từ:</label>
+                    <input type="text" class="form-control number-separator" name="MinPrice" value="@Model.MinPrice">
+                </div>
+                <div class="col-sm-1">
+                    <label>đến:</label>
+                    <input type="text" class="form-control number-separator" name="MaxPrice" value="@Model.MaxPrice">
+                </div>
+                <div class="col-sm-4">
+                    <label>Tên mặt hàng cần tìm:</label>
+                    <div class="input-group">
+                        <input name="SearchValue" type="text" class="form-control" placeholder="Nhập mặt hàng hàng cần tìm" value="@Model.SearchValue" autofocus="">
+                        <div class="input-group-btn">
+                            <button class="btn btn-info" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            <a href="~/Product/Create" class="btn btn-primary" style="margin-left:5px">
+                                <i class="fa fa-plus"></i> Bổ sung
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Hiển thị kết quả tìm kiếm (AJAX sẽ đổ vào đây) -->
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            // Khi submit form, chặn reload và gọi hàm searchData
+            $("#formSearch").submit(function (e) {
+                e.preventDefault();
+                searchData(1); // Luôn tìm từ trang 1 khi submit mới
+                return false;
+            });
+
+            // Tự động tìm kiếm khi trang vừa tải xong (giữ trạng thái cũ)
+            // Bọc @Model.Page trong dấu nháy để tránh lỗi cú pháp JS
+            var pageValue = '@Model.Page';
+            var startPage = parseInt(pageValue);
+
+            if (isNaN(startPage) || startPage <= 0) {
+                startPage = 1;
+            }
+
+            searchData(startPage);
+        });
+
+        function searchData(page) {
+            var url = $("#formSearch").prop("action");
+            var method = $("#formSearch").prop("method");
+            var container = $("#formSearch").data("result");
+
+            // Lấy toàn bộ dữ liệu từ form (bao gồm cả CategoryID, SupplierID, Price...)
+            var submitData = $("#formSearch").serializeArray();
+
+            // Thêm tham số Page vào
+            submitData.push({ name: "page", value: page });
+
+            $.ajax({
+                url: url,
+                method: method,
+                data: submitData,
+                success: function (html) {
+                    $(container).html(html);
+                    // Cuộn lên đầu bảng kết quả (kiểm tra nếu container tồn tại)
+                    if ($(container).length > 0) {
+                        $('html, body').animate({
+                            scrollTop: $(container).offset().top
+                        }, 300);
+                    }
+                }
+            });
+        }
+    </script>
+}

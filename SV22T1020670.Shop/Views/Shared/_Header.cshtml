@@ -1,0 +1,103 @@
+﻿@using SV22T1020670.Shop.AppCodes
+@using SV22T1020670.Shop.Models
+@using Newtonsoft.Json
+@using Microsoft.AspNetCore.Http
+
+@{
+    // 1. Lấy thông tin User
+    var userData = User.GetUserData();
+
+    // 2. Tính số lượng giỏ hàng
+    int cartCount = 0;
+    var sessionData = Context.Session.GetString("SHOP_CART");
+    if (!string.IsNullOrEmpty(sessionData))
+    {
+        var cart = JsonConvert.DeserializeObject<List<CartItem>>(sessionData);
+        if (cart != null)
+        {
+            cartCount = cart.Sum(m => m.Quantity);
+        }
+    }
+}
+
+<div class="bg-light py-1 text-center small text-muted">
+    Miễn phí vận chuyển cho đơn hàng từ 500k | Hotline: 1900 100x
+</div>
+
+<header class="sticky-top bg-white border-bottom shadow-sm">
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <a href="/" class="text-decoration-none">
+                    <h2 class="m-0 fw-bold" style="color: #ed7117;">Cam's<span class="text-dark">Shop</span></h2>
+                </a>
+            </div>
+
+            <div class="col-md-5">
+                <form action="/Product" method="get">
+                    <div class="input-group">
+                        <input type="text" name="searchValue" class="form-control border-end-0 rounded-start-pill ps-4" placeholder="Tìm son, kem dưỡng...">
+                        <button class="btn border border-start-0 bg-white rounded-end-pill pe-4" type="submit">
+                            <i class="fas fa-search text-muted"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4 text-end">
+                @if (User.Identity?.IsAuthenticated == false)
+                {
+                    <a href="~/Order/Search" class="me-3 text-dark text-decoration-none fw-bold">
+                        <i class="fas fa-truck me-1"></i> Tra cứu đơn
+                    </a>
+                    <a href="~/Account/Login" class="me-3 text-dark text-decoration-none">
+                        <i class="far fa-user fa-lg"></i> Đăng nhập
+                    </a>
+                }
+                else if (userData != null)
+                {
+                    <div class="dropdown d-inline-block me-3">
+                        <a href="#" class="text-dark text-decoration-none dropdown-toggle fw-bold" data-bs-toggle="dropdown">
+                            @if (!string.IsNullOrEmpty(userData.Photo))
+                            {
+                                <img src="@WebConfig.GetImageUrl("customer", userData.Photo)" class="rounded-circle me-1" style="width: 30px; height: 30px; object-fit: cover;">
+                            }
+                            else
+                            {
+                                <i class="fas fa-user-circle fa-lg text-primary me-1"></i>
+                            }
+                            Chào, @userData.DisplayName
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><a class="dropdown-item" href="~/Account/Profile"><i class="fas fa-id-card me-2"></i>Thông tin cá nhân</a></li>
+                            <li><a class="dropdown-item" href="~/Account/ChangePassword"><i class="fas fa-key me-2"></i>Đổi mật khẩu</a></li>
+                            <li><a class="dropdown-item" href="~/Order/History"><i class="fas fa-history me-2"></i>Lịch sử mua hàng</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="~/Account/Logout"><i class="fas fa-sign-out-alt me-2"></i>Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                }
+
+                <a href="~/Order/ShoppingCart" class="position-relative text-dark text-decoration-none">
+                    <i class="fas fa-shopping-bag fa-lg"></i>
+                    <span id="cartItemCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        @cartCount
+                    </span>
+                    Giỏ hàng
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-none d-md-block">
+        <nav class="nav justify-content-center py-2 fw-bold text-uppercase" style="font-size: 13px;">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">TRANG CHỦ</a>
+            <a class="nav-link text-dark" asp-controller="Product" asp-action="Index">MỸ PHẨM MỚI</a>
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="About">GIỚI THIỆU</a>
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">CHÍNH SÁCH</a>
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="Contact">LIÊN HỆ</a>
+            <a class="nav-link text-danger" href="#">KHUYẾN MÃI</a>
+        </nav>
+    </div>
+</header>

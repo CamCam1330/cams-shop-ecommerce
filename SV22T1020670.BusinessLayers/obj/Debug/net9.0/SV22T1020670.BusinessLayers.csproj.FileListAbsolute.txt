@@ -1,0 +1,34 @@
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.deps.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DataLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DataLayers.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.csproj.AssemblyReference.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.AssemblyInfoInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.AssemblyInfo.cs
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.csproj.CoreCompileInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T102.3EB46078.Up2Date
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\refint\SV22T1020670.BusinessLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\ref\SV22T1020670.BusinessLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.deps.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DataLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DataLayers.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.csproj.AssemblyReference.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.AssemblyInfoInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.AssemblyInfo.cs
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.csproj.CoreCompileInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T102.3EB46078.Up2Date
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\refint\SV22T1020670.BusinessLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.BusinessLayers\obj\Debug\net9.0\ref\SV22T1020670.BusinessLayers.dll

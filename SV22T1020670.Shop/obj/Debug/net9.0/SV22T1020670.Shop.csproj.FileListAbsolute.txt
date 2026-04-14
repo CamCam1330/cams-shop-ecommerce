@@ -1,0 +1,309 @@
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\appsettings.Development.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\appsettings.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.staticwebassets.runtime.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.staticwebassets.endpoints.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.exe
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.deps.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.runtimeconfig.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Azure.Core.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Azure.Identity.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Dapper.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.ClientModel.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Memory.Data.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\cs\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\de\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\es\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\it\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\pl\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\tr\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DataLayers.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DataLayers.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.csproj.AssemblyReference.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.AssemblyInfoInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.AssemblyInfo.cs
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.csproj.CoreCompileInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.MvcApplicationPartsAssemblyInfo.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.RazorAssemblyInfo.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.RazorAssemblyInfo.cs
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\bundle\SV22T1020670.Shop.styles.css
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\projectbundle\SV22T1020670.Shop.bundle.scp.css
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\6sgnf4t4xv-hptk4lvuud.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\b1b4l17pzi-61n19gt1b8.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ri30m1bq48-t84jsfg3co.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ih93mm6px7-bqjiyaj88i.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\8dww2hujhc-c2jlpeoesf.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\9uo7eoqzpt-erw9l3u2r3.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\60ectwv2nt-aexeepp0ev.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\i8j9q7fz0d-d7shbmvgxk.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\q1048490d2-ausgxo2sd3.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ago9e3khho-k8d9w2qqmf.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\8wk59fmgu1-cosvhxvwiu.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\o4cum3z27q-ub07r2b239.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\thkyiju75c-fvhpjtyr6v.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\je330kqiha-b7pk76d08c.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\4r3a6etm0j-fsbi9cje9m.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\31x6u6img6-rzd6atqjts.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3rnboc0lox-ee0r1s7dh0.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\zbksx8wdll-dxx9fxp4il.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\hb832rclcg-jd9uben2k1.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\yjqpxxokdz-khv3u5hwcm.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\purpltgt1r-r4e9w2rdcm.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\mfr2dyqyzx-lcd1t2u6c8.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\pd564wc100-c2oey78nd0.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\1ar3x4z7s6-tdbxkamptv.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\eby508r7j3-j5mq2jizvt.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\rk5pr02v1v-06098lyss8.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\j5d17ptuae-nvvlpmu67g.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ktc527yckq-s35ty4nyc5.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\apn0v9soum-pj5nd1wqec.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\r82d8ye2t8-46ein0sx1k.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3dm8dar9yq-v0zj4ognzu.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\x0p94br7f6-37tfw0ft22.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3lsg4lxo08-hrwsygsryq.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\4e57as07s8-pk9g2wxc8p.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\q98iqmr6tp-ft3s53vfgj.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\mt0pkppmwp-6cfz1n2cew.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\jgu1z22x4w-6pdc2jztkx.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\lgkyufce2c-493y06b0oq.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ym3h2ugq73-iovd86k7lj.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\hy1aftiwko-vr1egmr9el.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\zhcfmge1qd-kbrnm935zg.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\pyjeu81tm2-jj8uyg4cgr.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\kwcqtjmvi7-y7v9cxd14o.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\hpniv72tqc-notf2xhcfb.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\zpky0tk5z5-h1s4sie4z3.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\1wtv009kcn-63fj8s7r0e.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\9svey0tp5y-0j3bgjxly4.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ifuv1xk2up-47otxtyo56.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\jp1yyh39v3-4v8eqarkd7.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\pnzl7unkpw-356vix0kms.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ev2zjqncv6-83jwlth58m.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\evvpd1y29m-mrlpezrjn3.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\l1fe5hlmka-lzl9nlhx6b.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\mofamow3gl-ag7o75518u.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\msyvyqqsa0-x0q3zqp4vz.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\qurxu1c78p-0i3buxo5is.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\2akr7cjv9h-o1o13a6vjx.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\xudflxbqxr-ttgo8qnofa.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\2hfipoi5la-2z0ns9nrw6.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\giipc41lvd-muycvpuwrr.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\udtoq5un0b-87fc7y1x7t.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\259c6ywvp5-mlv21k5csn.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\9pvftrhefs-b9qztkuzu2.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\dzly15eu9x-b9qztkuzu2.gz
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.development.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T102.A978749B.Up2Date
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\refint\SV22T1020670.Shop.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.genruntimeconfig.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\ref\SV22T1020670.Shop.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\appsettings.Development.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\appsettings.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.staticwebassets.runtime.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.staticwebassets.endpoints.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.exe
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.deps.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.runtimeconfig.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.Shop.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Azure.Core.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Azure.Identity.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Dapper.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.ClientModel.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Memory.Data.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\cs\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\de\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\es\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\it\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\pl\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\tr\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.BusinessLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DataLayers.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.BusinessLayers.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DataLayers.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.csproj.AssemblyReference.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.AssemblyInfoInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.AssemblyInfo.cs
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.csproj.CoreCompileInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.MvcApplicationPartsAssemblyInfo.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.RazorAssemblyInfo.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.RazorAssemblyInfo.cs
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\bundle\SV22T1020670.Shop.styles.css
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\scopedcss\projectbundle\SV22T1020670.Shop.bundle.scp.css
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\xnwlhaohgk-{0}-hptk4lvuud-hptk4lvuud.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\90mvjmv399-{0}-61n19gt1b8-61n19gt1b8.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\rohqzv6idz-{0}-t84jsfg3co-t84jsfg3co.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ji6oyaj60w-{0}-bqjiyaj88i-bqjiyaj88i.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\7hl1hi8zya-{0}-c2jlpeoesf-c2jlpeoesf.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\6aj0dikqss-{0}-erw9l3u2r3-erw9l3u2r3.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\aao08626nt-{0}-aexeepp0ev-aexeepp0ev.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\jvvktk9eg7-{0}-d7shbmvgxk-d7shbmvgxk.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\297ntod12a-{0}-ausgxo2sd3-ausgxo2sd3.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\4tk5sujjvj-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\5aomn4ag48-{0}-cosvhxvwiu-cosvhxvwiu.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\7q4ufqwywa-{0}-ub07r2b239-ub07r2b239.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\9m4uodmz9n-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\5173upzg5w-{0}-b7pk76d08c-b7pk76d08c.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\8fo3mz1dc2-{0}-fsbi9cje9m-fsbi9cje9m.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\xhm3elmbeq-{0}-rzd6atqjts-rzd6atqjts.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\qdj58nlnp1-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\6ynla7shuh-{0}-dxx9fxp4il-dxx9fxp4il.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3z3pfmud66-{0}-jd9uben2k1-jd9uben2k1.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\l4rxuxfaz3-{0}-khv3u5hwcm-khv3u5hwcm.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3x1a59qkwh-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\g0y90rszpv-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\2zpi3q3s2c-{0}-c2oey78nd0-c2oey78nd0.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\sivg9gv9mf-{0}-tdbxkamptv-tdbxkamptv.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\xkcv6i5fg3-{0}-j5mq2jizvt-j5mq2jizvt.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\uwam8mwsas-{0}-06098lyss8-06098lyss8.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\p6b9k0iwv2-{0}-nvvlpmu67g-nvvlpmu67g.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\60ec2cw7fl-{0}-s35ty4nyc5-s35ty4nyc5.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ipintrmi0h-{0}-pj5nd1wqec-pj5nd1wqec.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\4gc27ic739-{0}-46ein0sx1k-46ein0sx1k.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\3n14847vte-{0}-v0zj4ognzu-v0zj4ognzu.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ld7e2qvtnw-{0}-37tfw0ft22-37tfw0ft22.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\4fr5yqe43v-{0}-hrwsygsryq-hrwsygsryq.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\it01mpvgkh-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ghkht3gsna-{0}-ft3s53vfgj-ft3s53vfgj.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\k8wmk7958j-{0}-6cfz1n2cew-6cfz1n2cew.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\uk71pgyqso-{0}-6pdc2jztkx-6pdc2jztkx.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ljzhj0bwgn-{0}-493y06b0oq-493y06b0oq.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\vuyei4i4s1-{0}-iovd86k7lj-iovd86k7lj.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\j8yc9kz1i3-{0}-vr1egmr9el-vr1egmr9el.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ifprwkd4ow-{0}-kbrnm935zg-kbrnm935zg.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\0qhgsg17m5-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\dbs6k07637-{0}-y7v9cxd14o-y7v9cxd14o.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\usq2bcio5a-{0}-notf2xhcfb-notf2xhcfb.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\09jt08vhwr-{0}-h1s4sie4z3-h1s4sie4z3.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\251naqgv43-{0}-63fj8s7r0e-63fj8s7r0e.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\zhnr6nq5p1-{0}-0j3bgjxly4-0j3bgjxly4.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\6cdc7x8bjq-{0}-47otxtyo56-47otxtyo56.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\ny8wgucosu-{0}-4v8eqarkd7-4v8eqarkd7.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\hqc4glx8s4-{0}-356vix0kms-356vix0kms.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\hyqiyrzjkj-{0}-83jwlth58m-83jwlth58m.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\s6skg81n83-{0}-mrlpezrjn3-mrlpezrjn3.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\vgp9y2o07u-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\v6sq3msbge-{0}-ag7o75518u-ag7o75518u.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\66037qaidi-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\rynj0yv6na-{0}-0i3buxo5is-0i3buxo5is.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\1g2uuzc8aj-{0}-o1o13a6vjx-o1o13a6vjx.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\s0hodbhgzu-{0}-ttgo8qnofa-ttgo8qnofa.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\lr4do7vhfv-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\jhvfmltq3t-{0}-muycvpuwrr-muycvpuwrr.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\a9pegxhkm5-{0}-87fc7y1x7t-87fc7y1x7t.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\js6mixnp1j-{0}-mlv21k5csn-mlv21k5csn.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\wnnulep8hd-{0}-cg5mi4qdae-cg5mi4qdae.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\compressed\smz32zgnja-{0}-cg5mi4qdae-cg5mi4qdae.gz
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.development.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\swae.build.ex.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T102.A978749B.Up2Date
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\refint\SV22T1020670.Shop.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\SV22T1020670.Shop.genruntimeconfig.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.Shop\obj\Debug\net9.0\ref\SV22T1020670.Shop.dll

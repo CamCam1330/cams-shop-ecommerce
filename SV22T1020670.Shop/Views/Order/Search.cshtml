@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Tra cứu đơn hàng";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5 text-center">
+                    <div class="mb-4 text-primary">
+                        <i class="fas fa-shield-alt fa-4x"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Tra cứu đơn hàng</h3>
+                    <p class="text-muted mb-4">Vui lòng nhập Mã đơn hàng và Số điện thoại để bảo mật thông tin.</p>
+
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-danger small">
+                            <i class="fas fa-exclamation-circle me-1"></i> @TempData["Message"]
+                        </div>
+                    }
+
+                    <form action="~/Order/Search" method="post">
+
+                        <div class="form-floating mb-3">
+                            <input type="number" name="id" class="form-control" id="floatingId" placeholder="Mã đơn hàng" required>
+                            <label for="floatingId">Mã đơn hàng (VD: 16)</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input type="text" name="phone" class="form-control" id="floatingPhone" placeholder="SĐT đặt hàng" required>
+                            <label for="floatingPhone">Số điện thoại đặt hàng</label>
+                        </div>
+
+                        <button class="btn btn-primary w-100 py-3 fw-bold text-uppercase rounded-pill" type="submit">
+                            <i class="fas fa-search me-2"></i> Tra cứu ngay
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

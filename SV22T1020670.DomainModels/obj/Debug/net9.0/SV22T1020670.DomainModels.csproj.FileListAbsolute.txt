@@ -1,0 +1,22 @@
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.deps.json
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.AssemblyInfoInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.AssemblyInfo.cs
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.csproj.CoreCompileInputs.cache
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\refint\SV22T1020670.DomainModels.dll
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Lap trinh ung dung Web\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\ref\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.deps.json
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\bin\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.AssemblyInfoInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.AssemblyInfo.cs
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.csproj.CoreCompileInputs.cache
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\refint\SV22T1020670.DomainModels.dll
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\SV22T1020670.DomainModels.pdb
+D:\Laptrinhungdungweb\SV22T1020670\SV22T1020670.DomainModels\obj\Debug\net9.0\ref\SV22T1020670.DomainModels.dll

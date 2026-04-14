@@ -1,0 +1,69 @@
+﻿@model SV22T1020670.DomainModels.PaginationSearchResult<SV22T1020670.DomainModels.Advertisement>
+@{
+    Layout = null;
+}
+
+<p style="margin: 10px 0;">
+    Có <strong>@Model.RowCount</strong> quảng cáo trong tổng số <strong>@Model.PageCount</strong> trang.
+</p>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr class="bg-primary">
+            <th style="width: 80px">Ảnh</th>
+            <th>Tiêu đề & Link</th>
+            <th>Thứ tự</th>
+            <th>Trạng thái</th>
+            <th style="width: 80px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/banners/@item.Photo" style="width: 100%; height: auto; object-fit: cover;" alt="" />
+                </td>
+                <td>
+                    <strong>@item.Title</strong><br />
+                    <small class="text-muted">Link: @item.Link</small>
+                </td>
+                <td>@item.DisplayOrder</td>
+                <td>
+                    @if (item.IsHidden)
+                    {
+                        <span class="label label-default">Ẩn</span>
+                    }
+                    else
+                    {
+                        <span class="label label-success">Hiển thị</span>
+                    }
+                </td>
+                <td class="text-right">
+                    <a href="~/Advertisement/Edit/@item.BannerID" class="btn btn-xs btn-info">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="~/Advertisement/Delete/@item.BannerID" class="btn btn-xs btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+    <ul class="pagination">
+        @for (int p = 1; p <= Model.PageCount; p++)
+        {
+            if (p == Model.Page)
+            {
+                <li class="active"><a href="#">@p</a></li>
+            }
+            else
+            {
+                <li><a href="javascript:;" onclick="doSearch(@p)">@p</a></li>
+            }
+        }
+    </ul>
+</div>

@@ -1,0 +1,47 @@
+﻿@model SV22T1020670.DomainModels.Category
+@{
+    ViewBag.Title = "Xóa loại hàng";
+}
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Category/Delete/@Model.CategoryID" method="post">
+            <div class="form-group">
+                <label>Tên loại hàng:</label>
+                <p class="form-control-static">@Model.CategoryName</p>
+            </div>
+
+            <div class="form-group">
+                <label>Mô tả:</label>
+                <p class="form-control-static">@Model.Description</p>
+            </div>
+
+            <div class="form-group text-right">
+                @{
+                    // Kiểm tra xem khách hàng có đang được sử dụng trong dữ liệu khác (ví dụ: đơn hàng)
+                    bool inUse = await SV22T1020670.BusinessLayers.CommonDataService.CategoryDB.InUsedAsync(Model.CategoryID);
+                }
+
+                @if (!inUse)
+                {
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa fa-trash"></i> Xóa dữ liệu
+                    </button>
+                }
+                else
+                {
+                    <div class="alert alert-warning text-center">
+                        <strong>⚠️ Không được phép xóa!</strong><br />
+                        Khách hàng này đang được sử dụng trong dữ liệu khác (ví dụ: đơn hàng).
+                    </div>
+                }
+
+                <a href="~/Customer" class="btn btn-default">
+                    <i class="fa fa-arrow-left"></i> Quay lại
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+

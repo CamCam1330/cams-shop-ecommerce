@@ -1,0 +1,54 @@
+﻿@model SV22T1020670.DomainModels.Product
+@{
+    ViewBag.Title = "Xóa mặt hàng";
+}
+
+<div class="box box-danger">
+    <div class="box-body">
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <form action="~/Product/Delete/@Model.ProductID" method="post">
+            <div class="form-group">
+                <label>Tên mặt hàng:</label>
+                <p class="form-control-static">@Model.ProductName</p>
+            </div>
+
+            <div class="form-group">
+                <label>Đơn vị tính:</label>
+                <p class="form-control-static">@Model.Unit</p>
+            </div>
+
+            <div class="form-group">
+                <label>Giá hàng:</label>
+                <p class="form-control-static">@string.Format("{0:N0}", Model.Price)</p>
+            </div>
+
+            <div class="form-group">
+                <label>Mô tả:</label>
+                <p class="form-control-static">@Model.ProductDescription</p>
+            </div>
+
+            <div class="form-group">
+                <label>Ảnh minh họa:</label>
+                <p class="form-control-static">
+                    <img src="~/images/products/@Model.Photo" onerror="this.src='/images/products/nophoto.png'" class="img img-bordered" style="width:200px" />
+                </p>
+            </div>
+
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa fa-trash"></i> Xóa dữ liệu
+                </button>
+                <a href="~/Product" class="btn btn-default">
+                    <i class="fa fa-arrow-left"></i> Quay lại
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

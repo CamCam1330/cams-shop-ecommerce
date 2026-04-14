@@ -1,0 +1,81 @@
+﻿@using SV22T1020670.Shop.AppCodes
+@model SV22T1020670.DomainModels.Customer
+@{
+    ViewData["Title"] = "Đăng ký tài khoản";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-uppercase" style="color: #ed7117;">Đăng ký thành viên</h3>
+                        <p class="text-muted small">Tạo tài khoản để nhận ưu đãi và theo dõi đơn hàng.</p>
+                    </div>
+
+                    <form action="~/Account/Register" method="post">
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger small" })
+
+                        <div class="row g-2">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="CustomerName" required placeholder="Nguyễn Văn A">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Tên giao dịch</label>
+                                <input type="text" class="form-control" name="ContactName" placeholder="Anh A">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Email (Tên đăng nhập) <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" name="Email" required placeholder="name@example.com">
+                            @Html.ValidationMessage("Email", new { @class = "text-danger small" })
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" name="Password" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" name="confirmPassword" required>
+                                @Html.ValidationMessage("Password", new { @class = "text-danger small" })
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Số điện thoại</label>
+                                <input type="text" class="form-control" name="Phone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold small">Tỉnh/Thành</label>
+                                <select class="form-select" name="Province" asp-items="@(await SelectListHelper.Provinces())">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small">Địa chỉ</label>
+                            <input type="text" class="form-control" name="Address" placeholder="Số nhà, đường...">
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg fw-bold text-uppercase rounded-pill" style="background-color: #ed7117; border-color: #ed7117;">
+                                Đăng ký ngay
+                            </button>
+                        </div>
+
+                        <div class="text-center">
+                            <span class="text-muted small">Đã có tài khoản?</span>
+                            <a href="~/Account/Login" class="text-decoration-none fw-bold ms-1" style="color: #ed7117;">Đăng nhập</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

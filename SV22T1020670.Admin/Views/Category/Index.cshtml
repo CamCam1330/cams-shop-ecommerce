@@ -1,0 +1,76 @@
+﻿@model PaginationSearchInput
+@{
+    ViewBag.Title = "Quản lý Loại hàng";
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <!-- Form tìm kiếm AJAX -->
+        <form id="formSearch" action="~/Category/Search" method="get" data-result="#searchResult">
+            <div class="input-group">
+                <input type="hidden" name="PageSize" value="@Model.PageSize" />
+
+                <input name="SearchValue"
+                       value="@Model.SearchValue"
+                       type="text"
+                       class="form-control"
+                       placeholder="Nhập tên loại hàng cần tìm"
+                       autofocus />
+
+                <div class="input-group-btn">
+                    <button class="btn btn-info" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+                    <a href="~/Category/Create" class="btn btn-primary" style="margin-left:5px">
+                        <i class="fa fa-plus"></i> Bổ sung
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Nơi hiển thị kết quả (AJAX đổ vào đây) -->
+        <div id="searchResult"></div>
+    </div>
+
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+        $("#formSearch").submit(function (e) {
+        e.preventDefault();
+        searchData(1);
+        return false;
+        });
+
+                var startPage = @Model.Page;
+                if (startPage <= 0) startPage = 1;
+                searchData(startPage);
+            });
+
+            function searchData(page) {
+                var url = $("#formSearch").prop("action");
+                var method = $("#formSearch").prop("method");
+                var container = $("#formSearch").data("result");
+                var submitData = $("#formSearch").serializeArray();
+
+                submitData.push({ name: "page", value: page });
+
+                $.ajax({
+                    url: url,
+                    method: method,
+                    data: submitData,
+                    success: function (html) {
+                        $(container).html(html);
+                        $('html, body').animate({
+                            scrollTop: $(container).offset().top
+                        }, 300);
+                    }
+                });
+            }
+    </script>
+
+
+}

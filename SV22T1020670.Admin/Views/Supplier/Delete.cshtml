@@ -1,0 +1,65 @@
+﻿@model Supplier
+@{
+    ViewBag.Title = "Xóa nhà cung cấp";
+}
+
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Supplier/DeleteConfirm/@Model.SupplierID" method="post">
+            <div class="form-group">
+                <label>Tên nhà cung cấp:</label>
+                <p class="form-control-static">@Model.SupplierName</p>
+            </div>
+
+            <div class="form-group">
+                <label>Tên giao dịch:</label>
+                <p class="form-control-static">@Model.ContactName</p>
+            </div>
+
+            <div class="form-group">
+                <label>Điện thoại:</label>
+                <p class="form-control-static">@Model.Phone</p>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <p class="form-control-static">@Model.Email</p>
+            </div>
+
+            <div class="form-group">
+                <label>Địa chỉ:</label>
+                <p class="form-control-static">@Model.Address</p>
+            </div>
+
+            <div class="form-group">
+                <label>Tỉnh/thành:</label>
+                <p class="form-control-static">@Model.Province</p>
+            </div>
+
+            <div class="form-group text-right">
+                @{
+                    bool inUse = await SV22T1020670.BusinessLayers.CommonDataService.SupplierDB.InUsedAsync(Model.SupplierID);
+                }
+                @if (!inUse)
+                {
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                        Xóa dữ liệu
+                    </button>
+                }
+                else
+                {
+                    <div class="alert alert-warning text-center">
+                        <strong>⚠️ Không được phép xóa!</strong><br />
+                        Nhà cung cấp này đang được sử dụng trong dữ liệu khác .
+                    </div>
+                }
+                <a href="~/Supplier" class="btn btn-default">
+                    Quay lại
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,119 @@
+﻿@using SV22T1020670.Admin.Controllers
+@using SV22T1020670.DomainModels.Models
+@model ProductSearchResult
+@{
+    Layout = null;
+}
+
+<div>
+    <!-- Hiển thị danh sách mặt hàng tìm được -->
+    @if (Model.Data != null && Model.Data.Any())
+    {
+        foreach (var item in Model.Data)
+        {
+            <form class="formAddToCart" 
+                  action="~/Order/AddToCart"
+                  method="post"
+                  style="background-color:#fff; border:1px solid #ccc; margin:5px 0px 5px 0px; padding:5px;">
+
+                <input type="hidden" name="ProductID" value="@item.ProductID"/>
+                <input type="hidden" name="ProductName" value="@item.ProductName" />
+                <input type="hidden" name="Unit" value="@item.Unit" />
+                <input type="hidden" name="Photo" value="@item.Photo" />
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <strong style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 40px; line-height: 20px;">
+                            @item.ProductName
+                        </strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="img img-responsive img-bordered" 
+                             src="~/images/products/@item.Photo"
+                             onerror="this.src='/images/products/nophoto.png'"
+                             style="width:100%; max-width:100px">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="form-group-sm">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>Giá bán:</label>
+                                    <input class="form-control inputmask-numeric"
+                                           type="text"
+                                           name="SalePrice"
+                                           value="@item.Price.ToString("N0")"
+                                           required />
+                                </div>
+                                <div class="col-md-5">
+                                    <label>Số lượng:</label>
+                                    <input class="form-control" type="number" value="1" min="1" max="999" name="Quantity"
+                                           oninput="if(this.value > 999) this.value = 999;" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-sm" style="margin-top:2px;">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        }
+    }
+    else
+    {
+        <p class="text-muted">Không tìm thấy mặt hàng nào</p>
+    }
+
+    <!-- Pagination -->
+    @if (Model.PageCount > 1)
+    {
+        <ul class="pager">
+            @if (Model.Page > 1)
+            {
+                <li class="previous">
+                    <a href="javascript:;" onclick="searchProducts(@(Model.Page - 1))">
+                        <i class="fa fa-backward"></i> Trước
+                    </a>
+                </li>
+            }
+            @if (Model.Page < Model.PageCount)
+            {
+                <li class="next">
+                    <a href="javascript:;" onclick="searchProducts(@(Model.Page + 1))">
+                        Sau <i class="fa fa-forward"></i>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".formAddToCart").submit(function (e) { 
+            e.preventDefault();
+
+            var url = $(this).prop("action");
+            var method = $(this).prop("method");
+            var submitData = $(this).serializeArray();
+
+            $.ajax({
+                url: url,
+                method: method,
+                data: submitData,
+                success: function (data) {
+                    if (data.code == 1){
+                        getCart();
+                    }
+                    else{
+                        alert(data.message);
+                    }
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,67 @@
+﻿@using SV22T1020670.Admin.AppCodes
+@model SV22T1020670.DomainModels.Customer
+@{
+    // Lấy danh sách tỉnh/thành từ CSDL
+    var provices = await SV22T1020670.BusinessLayers.CommonDataService.ProvinceDB.ListAsync();
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <form action="~/Customer/SaveData" method="post">
+            <input type="hidden" name="@nameof(Model.CustomerID)" value="@Model.CustomerID" />
+
+            <div class="form-group">
+                <label asp-for="CustomerName">Tên khách hàng:</label>
+
+                <input type="text" class="form-control" autofocus asp-for="CustomerName">
+                <span asp-validation-for="CustomerName"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Tên giao dịch:</label>
+                <input type="text" class="form-control" autofocus asp-for="ContactName" />
+                <span asp-validation-for="ContactName"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Điện thoại:</label>
+                <input type="text" class="form-control" autofocus asp-for="Phone" />
+                @Html.ValidationMessageFor(m => m.Phone)
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" class="form-control" autofocus asp-for="Email" />
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+            <div class="form-group">
+                <label>Địa chỉ:</label>
+                <input type="text" class="form-control" autofocus asp-for="Address" />
+                <span asp-validation-for="Address"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label>Tỉnh/thành:</label>
+                <select class="form-control" asp-for="Province" asp-items="await SelectListHelper.Provinces()" "></select>
+                <span asp-validation-for="Province"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" asp-for="IsLocked" />
+                    Khóa tài khoản khách hàng @(Model.IsLocked ? "(Đang khóa)" : "(Đang mở)")
+                </label>
+            </div>
+
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-floppy-o"></i> Lưu dữ liệu
+                </button>
+                <a href="~/Customer" class="btn btn-default">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>

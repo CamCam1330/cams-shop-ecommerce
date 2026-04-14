@@ -1,0 +1,42 @@
+﻿@model SV22T1020670.DomainModels.Shipper
+@{
+    ViewBag.Title = "Xóa người giao hàng";
+}
+
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Shipper/DeleteConfirm/@Model.ShipperID" method="post">
+
+            <div class="form-group">
+                <label>Tên người giao hàng:</label>
+                <p class="form-control-static form-control">@Model.ShipperName</p>
+            </div>
+
+            <div class="form-group">
+                <label>Điện thoại:</label>
+                <p class="form-control-static form-control">@Model.Phone</p>
+            </div>
+
+            <div class="form-group text-right">
+                @if (string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                {
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa fa-trash"></i> Xóa dữ liệu
+                    </button>
+                }
+                else
+                {
+                    <div class="alert alert-warning text-center" style="margin-bottom: 10px;">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <strong>Không thể xóa:</strong> @ViewBag.ErrorMessage
+                    </div>
+                }
+
+                <a href="~/Shipper" class="btn btn-default">
+                    <i class="fa fa-arrow-left"></i> Quay lại
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>

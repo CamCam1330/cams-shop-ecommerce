@@ -1,0 +1,82 @@
+﻿@{
+    @model SV22T1020670.DomainModels.Supplier
+}
+
+<!--
+  File này đã được cập nhật để sử dụng Tag Helpers của ASP.NET Core.
+  Nó sẽ tự động:
+  1. Liên kết với các thuộc tính Model (SupplierName, ContactName, ...).
+  2. Hiển thị các thông báo lỗi (validation) từ Controller
+     bằng thẻ <span asp-validation-for="...">.
+  3. Hiển thị các lỗi chung (ví dụ: lỗi exception)
+     bằng thẻ <div asp-validation-summary="ModelOnly">.
+-->
+
+<div class="box box-primary">
+    <div class="box-body">
+
+        <form asp-controller="Supplier" asp-action="SaveData" method="post">
+
+            <input type="hidden" asp-for="SupplierID" />
+
+            <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+            <div class="form-group">
+                <label asp-for="SupplierName">Tên nhà cung cấp:</label>
+                <input type="text" class="form-control" autofocus asp-for="SupplierName">
+                <span asp-validation-for="SupplierName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContactName">Tên giao dịch:</label>
+                <input type="text" class="form-control" asp-for="ContactName">
+                <span asp-validation-for="ContactName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Phone">Điện thoại:</label>
+                <input type="text" class="form-control" asp-for="Phone">
+                <span asp-validation-for="Phone"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input type="email" class="form-control" asp-for="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address">Địa chỉ:</label>
+                <input type="text" class="form-control" asp-for="Address">
+                <span asp-validation-for="Address"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Province">Tỉnh/thành:</label>
+                <select class="form-control" asp-for="Province">
+
+                    <option value="">-- Chọn tỉnh thành --</option>
+                    @foreach (var province in await SV22T1020670.BusinessLayers.CommonDataService.ProvinceDB.ListAsync())
+                    {
+
+                        <option value="@province.ProvinceName">@province.ProvinceName</option>
+                    }
+                </select>
+                <span asp-validation-for="Province"></span>
+            </div>
+
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-floppy-o"></i>
+                    Lưu dữ liệu
+                </button>
+
+                <a asp-action="Index" class="btn btn-default">
+                    Quay lại
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>

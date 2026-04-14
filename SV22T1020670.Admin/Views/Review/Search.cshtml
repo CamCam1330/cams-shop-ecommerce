@@ -1,0 +1,64 @@
+﻿@model SV22T1020670.DomainModels.PaginationSearchResult<SV22T1020670.DomainModels.ProductReview>
+
+<p style="margin: 10px 0 10px 0">
+    Có <strong>@Model.RowCount</strong> phản hồi.
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr class="bg-primary">
+                <th>Khách hàng</th>
+                <th>Sản phẩm</th>
+                <th>Điểm sao</th>
+                <th>Nội dung</th>
+                <th>Thời gian</th>
+                <th>Trạng thái</th>
+                <th style="width: 100px">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                <tr>
+                    <td>@item.CustomerName</td>
+                    <td>@item.ProductName</td>
+                    <td class="text-warning">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            if (i <= item.Rating)
+                            {
+                                <i class="fa fa-star"></i>
+                            }
+                            else
+                            {
+
+                                <i class="fa fa-star-o"></i>
+                            }
+                        }
+                    </td>
+                    <td>@item.Comment</td>
+                    <td>@item.ReviewTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        @if (item.IsHidden)
+                        {
+                            <span class="label label-danger">Đang ẩn</span>
+                        }
+                        else
+                        {
+                            <span class="label label-success">Hiển thị</span>
+                        }
+                    </td>
+                    <td class="text-right">
+                        <a href="~/Review/Toggle/@item.ReviewID" class="btn btn-xs btn-default" title="@(item.IsHidden ? "Hiện bình luận" : "Ẩn bình luận")">
+                            <i class="fa @(item.IsHidden ? "fa-eye" : "fa-eye-slash")"></i>
+                        </a>
+                        <a href="~/Review/Delete/@item.ReviewID" class="btn btn-xs btn-danger" onclick="return confirm('Xóa vĩnh viễn bình luận này?')">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

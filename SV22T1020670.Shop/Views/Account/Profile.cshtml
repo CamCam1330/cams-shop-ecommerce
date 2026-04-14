@@ -1,0 +1,75 @@
+﻿@using SV22T1020670.Shop.AppCodes
+@model SV22T1020670.DomainModels.Customer
+@{
+    ViewData["Title"] = "Hồ sơ cá nhân";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h3 class="fw-bold mb-4 text-uppercase text-center">Hồ sơ cá nhân</h3>
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show">
+                    <i class="fas fa-check-circle me-2"></i> @TempData["Message"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <form action="~/Account/SaveProfile" method="post">
+                        <input type="hidden" name="CustomerID" value="@Model.CustomerID" />
+                        <input type="hidden" name="Email" value="@Model.Email" />
+                        <input type="hidden" name="Password" value="@Model.Password" />
+                        <input type="hidden" name="IsLocked" value="@Model.IsLocked.ToString()" />
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Email đăng nhập</label>
+                                <input type="text" class="form-control bg-light" value="@Model.Email" readonly disabled>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Tên khách hàng <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="CustomerName" value="@Model.CustomerName" required>
+                                @Html.ValidationMessage("CustomerName", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Tên giao dịch <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="ContactName" value="@Model.ContactName" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Số điện thoại <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="Phone" value="@Model.Phone" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Tỉnh / Thành <span class="text-danger">*</span></label>
+                                <select class="form-select" name="Province" required
+                                        asp-for="Province"
+                                        asp-items="@(await SelectListHelper.Provinces())">
+                                </select>
+                                @Html.ValidationMessage("Province", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Địa chỉ chi tiết</label>
+                                <input type="text" class="form-control" name="Address" value="@Model.Address">
+                            </div>
+
+                            <div class="col-12 mt-4 text-center">
+                                <button type="submit" class="btn btn-primary px-5 rounded-pill fw-bold">
+                                    <i class="fas fa-save me-2"></i> CẬP NHẬT
+                                </button>
+                                <a href="~/Home" class="btn btn-outline-secondary px-4 rounded-pill ms-2">Hủy</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SV22T1020670.DomainModels/1.0.0": {
+        "runtime": {
+          "SV22T1020670.DomainModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SV22T1020670.DomainModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
