@@ -21,10 +21,10 @@ SV22T1020670.sln
 │   └── SV22T1020670.Shop/         # Web App: Giao diện cửa hàng thương mại điện tử
 │
 └── Libraries/ (Business & Data Layers)
-    ├── SV22T1020670.BusinessLayers/ # Services xử lý logic nghiệp vụ (CommonDataService, OrderDataService...)
+    ├── SV22T1020670.BusinessLayers/ # Services xử lý logic nghiệp vụ
     ├── SV22T1020670.DataLayers/     # Data Access Layer giao tiếp CSDL qua Dapper
-    └── SV22T1020670.DomainModels/   # Domain Entities (Product, Order, Customer, UserAccount...)
-
+    └── SV22T1020670.DomainModels/   # Domain Entities (Product, Order, Customer...)
+```
 ##✨ Key Features
 🛍️ Shop Application (Dành cho khách hàng)
 
